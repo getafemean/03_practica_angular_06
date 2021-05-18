@@ -4,18 +4,18 @@
         <form>
             <div class="row">
                 <label>Nombre</label>
-                <input type="text" [(ngModel)]="cliente.nombre">
+                <input type="text" name="nombre" [(ngModel)]="cliente.nombre">
             </div>
             <div class="row">
                 <label>CIF</label>
-                <input type="text" [(ngModel)]="cliente.cif">
+                <input type="text" name="cif" [(ngModel)]="cliente.cif">
             </div>
             <div class="row">
                 <label>Localidad</label>
-                <input type="text" [(ngModel)]="cliente.localidad">
+                <input type="text" name="localidad" [(ngModel)]="cliente.localidad">
             </div>
             <div class="row end">
-                <button>Añadir</button>
+                <button type="button" (click)="addCliente()">Añadir</button>
             </div>
         </form>
     </div>

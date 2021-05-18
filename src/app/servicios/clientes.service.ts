@@ -19,5 +19,9 @@ export class ClientesService {
     return this.clientes;
   } 
 
+  setCliente(cliente: Cliente): void {
+    this.clientes.push(cliente);
+  }
+
 
 }

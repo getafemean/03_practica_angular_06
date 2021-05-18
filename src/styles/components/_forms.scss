@@ -1,15 +1,32 @@
-input {
-    border: none;
-    border-bottom: 1.5px solid $primary-font-color;
-    font-size: 1rem;
-    padding: 0.5em 1em;
+form {
     width: 100%;
-    margin: 1rem 0;
-    transition: 400ms all ease-in-out;
-    max-width: 300px;
-}
 
-input:focus {
-    outline: none;
-    border-bottom: 2px solid $darker-primary-font-color;
+    .row {
+        padding: 0.5rem;
+        @include flex(column, flex-start, flex-start);
+
+        label {
+            font-size: 0.8rem;
+            margin-bottom: 0.3rem;
+        }
+
+        input {
+            border: 1px solid $regular-font-color;
+            border-radius: 0.3rem;
+            font-size: 0.9rem;
+            padding: 0.5em 1em;
+            width: 100%;
+            transition: 400ms all ease-in-out;
+        }
+        
+        input:focus {
+            outline: none;
+        }
+
+        &.end {
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+    }
+
 }
